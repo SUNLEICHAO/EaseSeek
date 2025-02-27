@@ -1,0 +1,3 @@
+# EaseSeek
+
+React + TypeScript + Vite

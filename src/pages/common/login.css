@@ -1,0 +1,51 @@
+.login-title {
+  font-size: 20px;
+}
+
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../assets/login_bg.png);
+
+  .login-container {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    .login-logo {
+      position: absolute;
+      top: 15%;
+      left: 8%;
+    }
+    .login-box {
+      /* padding: 120px; */
+      .login-box-inner {
+        box-shadow: 0 4px 20px 0 rgba(208, 219, 255, 0.3);
+        border-radius: 2px;
+        padding: 50px;
+        margin-right: 80px;
+        min-width: 300px;
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.65);
+        .login-great {
+          margin-bottom: 40px;
+          font-size: 24px;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.85);
+          text-align: center;
+        }
+        .login-username {
+          margin-bottom: 16px;
+        }
+        .login-password {
+          margin-bottom: 20px;
+        }
+        .login-remember {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
