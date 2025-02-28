@@ -2,8 +2,6 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const withAuth = (WrappedComponent) => {
-  console.log("jinrule");
-  
   return (props) => {
     const navigate = useNavigate();
     const location = useLocation();

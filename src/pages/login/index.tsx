@@ -1,20 +1,17 @@
 import React, { useMemo } from "react";
-import logoLong from "../../assets/logo_long.png";
+import logoLong from "@/assets/images/logo_long.png";
 import type { CheckboxProps } from "antd";
-import { Input, Button, Checkbox, notification, Form, Select } from "antd";
+import { Input, Button, Checkbox, notification, Form } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
-import "./login.css";
 import { useNavigate } from "react-router-dom";
-
+import loginBg from "@/assets/images/login_bg.png";
 const Context = React.createContext({ name: "Default" });
 
 export function Login() {
   const navigate = useNavigate();
 
   const [api, contextHolder] = notification.useNotification();
-  const onChange: CheckboxProps["onChange"] = (e) => {
-    console.log(`checked = ${e.target.checked}`);
-  };
+  const onChange: CheckboxProps["onChange"] = (e) => {};
   const contextValue = useMemo(() => ({ name: "Ant Design" }), []);
   const [form] = Form.useForm();
 
@@ -29,14 +26,14 @@ export function Login() {
 
   return (
     <>
-      <div className="login-page flex-center">
-        <div className="login-container">
-          <div className="login-logo">
+      <div className="w-screen h-screen" style={{ backgroundImage: `url(${loginBg})` }}>
+        <div className="w-4/5 h-full relative flex justify-end items-center">
+          <div className="absolute top-[15%] left-[8%]">
             <img src={logoLong} alt="" width="451" height="62" />
           </div>
-          <div className="login-box">
-            <div className="login-box-inner">
-              <div className="login-great">
+          <div className="mr-20">
+            <div className="shadow-[0_4px_20px_0_rgba(208,219,255,0.3)] rounded-sm p-[50px] min-w-[300px] w-[300px] bg-white/65">
+              <div className="mb-10 text-2xl font-medium text-[rgba(0,0,0,0.85)] text-center">
                 <span>欢迎登录系统</span>
               </div>
               <Form form={form}>

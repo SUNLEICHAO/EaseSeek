@@ -13,7 +13,6 @@ export const About: React.FC = () => {
       placement: "topRight",
       duration: 10,
     });
-    console.log("contextHolder", contextHolder);
   };
 
   const contextValue = useMemo(() => ({ name: "Ant Design" }), []);

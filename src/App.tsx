@@ -1,11 +1,15 @@
-import { Routes, Route, Link } from "react-router-dom";
-import { About } from "./pages/about/about";
-import { Layout } from "./pages/common/layout.tsx";
-import { Home } from "./pages/home/home";
-import { Login } from "./pages/common/login";
+import { Routes, Route } from "react-router-dom";
+import { About } from "./pages/about/index.tsx";
+import User from "@/pages/user/index.tsx";
+import Setting from "@/pages/setting/index.tsx";
+import Chat from "@/pages/chat/index.tsx";
+import NotFound from "@/pages/404.tsx";
+import { Layout } from "./components/common/layout.tsx";
+import { Home } from "./pages/home/index.tsx";
+import { Login } from "./pages/login/index.tsx";
+import withAuth from "./components/common/withAuth.tsx";
+import { ConfigProvider } from "antd";
 import "./App.css";
-import withAuth from "./pages/common/withAuth.tsx";
-import { Button, ConfigProvider, Space } from "antd";
 const ProtectedAbout = withAuth(About);
 
 function App() {
@@ -22,9 +26,14 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/user" element={<User />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/chat/:id" element={<Chat />} />
+            <Route path="/setting" element={<Setting />} />
             <Route path="/about-demo" element={<ProtectedAbout />} />
           </Route>
           <Route path="/login" element={<Login />} />
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </ConfigProvider>
     </>

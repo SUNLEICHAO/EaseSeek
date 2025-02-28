@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
-  HomeOutlined,
-  FundOutlined,
-  FundTwoTone,
-} from "@ant-design/icons";
+import { HomeOutlined, FundOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { ConfigProvider, Menu } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -38,7 +31,6 @@ const items: MenuItem[] = [
 const App: React.FC = () => {
   const navigate = useNavigate();
   const onClick: MenuProps["onClick"] = (e) => {
-    console.log("click ", e);
     navigate(e.key);
   };
 
@@ -47,13 +39,13 @@ const App: React.FC = () => {
       theme={{
         components: {
           Menu: {
-            itemBg: "#6387d4",
-            itemColor: "#fff",
-            itemHoverBg: "rgba(255,255,255,0.15)",
-            itemHoverColor: "#fff",
-            itemActiveBg: "rgba(255,255,255,0.15)",
-            itemSelectedBg: "rgba(255,255,255,0.15)",
-            itemSelectedColor: "#fff",
+            itemBg: "#f9fbff",
+            itemColor: "red",
+            itemHoverBg: "#e6f7ff",
+            itemHoverColor: "#1890ff",
+            itemActiveBg: "#e6f7ff",
+            itemSelectedBg: "#e6f7ff",
+            itemSelectedColor: "#1890ff",
           },
         },
       }}

@@ -1,6 +1,6 @@
 import React from "react";
-import logoXhzh from "@/assets/logo_xhzh.png";
-
+import logoXhzh from "@/assets/images/logo_xhzh.png";
+import SvgIcon from "@/components/common/SvgIcon.tsx";
 const type: string = "not-oa";
 
 const Header: React.FC = () => {
@@ -17,8 +17,8 @@ const Header: React.FC = () => {
           <div className="sidebar-version">V2.4.25.0</div>
         </div>
       ) : (
-        <header className="w-full p-4 border-b">
-            <span className="text-2xl font-bold text-[rgb(0,0,0)] dark:text-white">DeepSeek</span>
+        <header className="w-full p-4">
+          <SvgIcon className="h-8 w-[100%]" name="logo-text"></SvgIcon>
         </header>
       )}
     </>
