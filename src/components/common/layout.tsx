@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import TheHeader from "../content/TheHeader";
-import ChatHistoryList from "@/components/content/ChatHistoryList.tsx";
+import ChatList from "@/components/content/ChatList";
 import SvgIcon from "@/components/common/SvgIcon.tsx";
 
 export const Layout: React.FC = () => {
@@ -18,7 +18,7 @@ export const Layout: React.FC = () => {
             </div>
           </div>
           <div className="flex-1 overflow-y-auto pl-4">
-            <ChatHistoryList />
+            <ChatList />
           </div>
           <div className="h-16 flex flex-row justify-between items-center p-4 text-[#5d5d5d]">
             <div
@@ -37,9 +37,10 @@ export const Layout: React.FC = () => {
           </div>
         </div>
         <div className="flex-1 flex flex-col">
-          <div className="flex-1 overflow-auto p-4">
+          <div className="flex-1 overflow-auto">
             <Outlet />
           </div>
+          <div className="text-center text-[#a3a3a3] text-xs/[14px] mt-[6px] mb-[6px]">内容由 AI 生成，请仔细甄别</div>
         </div>
       </div>
     </>

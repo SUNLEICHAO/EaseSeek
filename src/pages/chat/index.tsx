@@ -1,54 +1,48 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import Mock from "mockjs";
-
-// 组件外部：常量、工具函数
-const mockData = Mock.mock({
-  "list|1-10": [
-    {
-      id: "@id",
-      // 模拟一句话，随机的一串中文0-20个字
-      "sentence|1": "@cparagraph(1, 20)",
-    },
-  ],
-});
+import SendMessage from "@/pages/chat/SendMessage.tsx";
+import TheGreat from "@/pages/chat/TheGreat.tsx";
+import ChatRecord from "@/pages/chat/ChatRecord";
+import type { Message } from "@/pages/chat/types";
 
 const UserPage: React.FC = () => {
   // 组件内部：状态、副作用、事件处理函数
   const { id } = useParams<{ id: string }>();
-  const [messages, setMessages] = useState<any[]>([]);
+  const [messageList, setMessageList] = useState<Message[]>([]);
 
-  useEffect(() => {
-    // 副作用代码
-    console.log(JSON.stringify(mockData, null, 4));
-    // 可以在这里调用 API 或进行其他操作
-  }, []);
-
-  const handleSendMessage = () => {
-    // 事件处理函数
-    setMessages([...messages, { id: Date.now() }]);
+  const handleNewMessage = (message: { content: string; isDeepThinking: boolean; isInternetSearch: boolean }) => {
+    setMessageList((prevMessageList) => [
+      ...prevMessageList,
+      {
+        id: Math.random().toString(),
+        content: message.content,
+        sender: "user",
+        time: "",
+      },
+      {
+        id: Math.random().toString(),
+        content: "你好，" + message.content,
+        sender: "agent",
+        time: "",
+      },
+    ]);
   };
 
   return (
     <>
-      {/* JSX 中的 JavaScript 表达式 */}
-      {id ? (
-        <div className="user-page">
-          <h1>聊天 {id}</h1>
-          <button onClick={handleSendMessage}>发送消息</button>
-        </div>
-      ) : (
-        <div className="user-page">
-          <h1>新聊天</h1>
-          <button onClick={handleSendMessage}>发送消息</button>
-        </div>
-      )}
-      <div className="messages">
-        {mockData.list.map((item: any) => (
-          <div key={item.id} className="message">
-            {item.sentence}
+      <div className="m-[auto] max-w-[800px] w-[100%] h-[100%] flex flex-col justify-center pl-8 pr-8">
+        {id ? (
+          <div className="user-page grow-1 overflow-hidden flex flex-col">
+            <div className="flex justify-center items-center h-12 shadow-[0_4px_6px_-6px_rgba(0,0,0,0.1)]">
+              <span>聊天: {id}</span>
+            </div>
+            <ChatRecord messageList={messageList} />
           </div>
-        ))}
+        ) : (
+          <TheGreat />
+        )}
+        {/* <>当前消息：{messages.join("@")}</> */}
+        <SendMessage onSendMessage={handleNewMessage} />
       </div>
     </>
   );
