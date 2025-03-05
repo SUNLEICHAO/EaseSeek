@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
 import { Divider } from "antd";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { CHAT_LIST, TIME_STAGE } from "@/const/index.ts";
-import { setLocalData, getLocalData } from "@/utils/localStorageUtil.ts";
 import type { ChatItem } from "@/types/index.ts";
+import { setLocalData, getLocalData } from "@/utils/localStorageUtil.ts";
 
 type ChatHistoryGroups = {
   time: string;

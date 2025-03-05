@@ -1,10 +1,13 @@
-import React, { useMemo } from "react";
-import type { CheckboxProps } from "antd";
-import { Input, Button, Checkbox, notification, Form } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { Input, Button, Checkbox, notification, Form } from "antd";
+import React, { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
+
 import loginBg from "@/assets/images/login_bg.png";
 import logoLong from "@/assets/images/logo_long.png";
+
+import type { CheckboxProps } from "antd";
+
 const Context = React.createContext({ name: "Default" });
 
 export function Login() {

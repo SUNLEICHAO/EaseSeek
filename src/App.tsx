@@ -1,15 +1,18 @@
+import { ConfigProvider } from "antd";
 import { Routes, Route } from "react-router-dom";
-import { About } from "./pages/about/index.tsx";
-import User from "@/pages/user/index.tsx";
-import Setting from "@/pages/setting/index.tsx";
-import Chat from "@/pages/chat/index.tsx";
+
 import NotFound from "@/pages/404.tsx";
+import Chat from "@/pages/chat/index.tsx";
+import Setting from "@/pages/setting/index.tsx";
+import User from "@/pages/user/index.tsx";
+
 import { Layout } from "./components/common/Layout.tsx";
+import withAuth from "./components/common/WithAuth.tsx";
+import { About } from "./pages/about/index.tsx";
 import { Home } from "./pages/home/index.tsx";
 import { Login } from "./pages/login/index.tsx";
-import withAuth from "./components/common/WithAuth.tsx";
-import { ConfigProvider } from "antd";
 import "./App.css";
+
 const ProtectedAbout = withAuth(About);
 
 function App() {

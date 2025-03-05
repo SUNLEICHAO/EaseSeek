@@ -1,6 +1,8 @@
 import React from "react";
+
 import logoXhzh from "@/assets/images/logo_xhzh.png";
 import SvgIcon from "@/components/common/SvgIcon.tsx";
+
 const type: string = "not-oa";
 
 const Header: React.FC = () => {

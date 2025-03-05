@@ -1,8 +1,9 @@
-import { useParams } from "react-router-dom";
-import SendMessage from "@/components/content/chat/SendMessage";
 import React, { useState } from "react";
-import TheGreat from "@/components/content/chat/TheGreat";
+import { useParams } from "react-router-dom";
+
 import ChatRecord from "@/components/content/chat/ChatRecord";
+import SendMessage from "@/components/content/chat/SendMessage";
+import TheGreat from "@/components/content/chat/TheGreat";
 import type { Message } from "@/types";
 
 const UserPage: React.FC = () => {

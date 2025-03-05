@@ -1,8 +1,9 @@
-import React from "react";
 import { HomeOutlined, FundOutlined } from "@ant-design/icons";
-import type { MenuProps } from "antd";
 import { ConfigProvider, Menu } from "antd";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+
+import type { MenuProps } from "antd";
 
 type MenuItem = Required<MenuProps>["items"][number];
 

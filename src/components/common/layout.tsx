@@ -1,8 +1,10 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import LayoutHeader from "./LayoutHeader";
-import ChatList from "@/components/content/ChatList";
+
 import SvgIcon from "@/components/common/SvgIcon.tsx";
+import ChatList from "@/components/content/ChatList";
+
+import LayoutHeader from "./LayoutHeader";
 
 export const Layout: React.FC = () => {
   const navigate = useNavigate();

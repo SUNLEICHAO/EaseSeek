@@ -1,12 +1,13 @@
-import React, { useState } from "react";
 import { ConfigProvider, Input, Button } from "antd";
+import React, { useState } from "react";
+
+import SvgIcon from "@/components/common/SvgIcon.tsx";
 
 interface SendMessageProps {
   onSendMessage: (message: { content: string; isDeepThinking: boolean; isInternetSearch: boolean }) => void;
 }
 
 const { TextArea } = Input;
-import SvgIcon from "@/components/common/SvgIcon.tsx";
 
 const SendMessage: React.FC<SendMessageProps> = ({ onSendMessage }) => {
   const [inputValue, setInputValue] = useState<string>("");
