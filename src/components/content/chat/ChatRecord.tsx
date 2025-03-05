@@ -30,7 +30,7 @@ export const ChatRecord: React.FC<ChatRecordProps> = ({ messageList }) => {
         <div
           key={message.id}
           className={`max-w-[70%] p-3 rounded-2xl ${
-            message.sender === "user" ? "self-end bg-blue-500 text-white" : "self-start bg-gray-100 text-gray-900"
+            message.role === "user" ? "self-end bg-blue-500 text-white" : "self-start bg-gray-100 text-gray-900"
           }`}
         >
           {message.content}

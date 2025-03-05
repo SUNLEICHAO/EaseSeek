@@ -5,3 +5,8 @@ declare module "*.png" {
   const content: string;
   export default content;
 }
+
+declare module "virtual:*" {
+  const content: unknown;
+  export default content;
+}

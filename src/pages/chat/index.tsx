@@ -17,13 +17,13 @@ const UserPage: React.FC = () => {
       {
         id: Math.random().toString(),
         content: message.content,
-        sender: "user",
+        role: "user",
         time: "",
       },
       {
         id: Math.random().toString(),
         content: "你好，" + message.content,
-        sender: "agent",
+        role: "agent",
         time: "",
       },
     ]);

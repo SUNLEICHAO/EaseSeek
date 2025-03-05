@@ -1,3 +1,20 @@
-# Ignore artifacts:
+# 构建输出目录
+dist
 build
 coverage
+
+# 依赖目录
+node_modules
+
+# 日志文件
+*.log
+
+# 环境配置文件
+.env
+.env.*
+
+# 其他常见忽略项
+.DS_Store
+.cache
+.idea
+.vscode

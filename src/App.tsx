@@ -7,13 +7,10 @@ import Setting from "@/pages/setting/index.tsx";
 import User from "@/pages/user/index.tsx";
 
 import { Layout } from "./components/common/Layout.tsx";
-import withAuth from "./components/common/WithAuth.tsx";
 import { About } from "./pages/about/index.tsx";
 import { Home } from "./pages/home/index.tsx";
 import { Login } from "./pages/login/index.tsx";
 import "./App.css";
-
-const ProtectedAbout = withAuth(About);
 
 function App() {
   return (
@@ -33,7 +30,6 @@ function App() {
             <Route path="/chat" element={<Chat />} />
             <Route path="/chat/:id" element={<Chat />} />
             <Route path="/setting" element={<Setting />} />
-            <Route path="/about-demo" element={<ProtectedAbout />} />
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />}></Route>

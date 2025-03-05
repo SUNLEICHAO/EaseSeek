@@ -40,6 +40,7 @@ export default tseslint.config(
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       ...importPlugin.configs.recommended.rules,
       ...importPlugin.configs.typescript.rules,
+      // 具体的 import 规则
       "import/no-unresolved": "error",
       "import/named": "error",
       "import/namespace": "error",

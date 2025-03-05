@@ -1,7 +1,7 @@
 export interface Message {
   id: string;
   content: string;
-  sender: "user" | "agent";
+  role: "user" | "agent";
   time: string;
   [key: string]: string;
 }
