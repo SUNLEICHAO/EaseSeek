@@ -28,7 +28,7 @@ const items: MenuItem[] = [
   },
 ];
 
-const App: React.FC = () => {
+const LayoutMenu: React.FC = () => {
   const navigate = useNavigate();
   const onClick: MenuProps["onClick"] = (e) => {
     navigate(e.key);
@@ -55,4 +55,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default LayoutMenu;

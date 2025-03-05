@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Divider } from "antd";
 import { useNavigate } from "react-router-dom";
-import { CHAT_LIST, TIME_STAGE, TIME_STAGE_STEP } from "@/const/index.ts";
+import { CHAT_LIST, TIME_STAGE } from "@/const/index.ts";
 import { setLocalData, getLocalData } from "@/utils/localStorageUtil.ts";
 import type { ChatItem } from "@/types/index.ts";
 
@@ -13,14 +13,15 @@ type ChatHistoryGroups = {
 const ChatHistoryList: React.FC = () => {
   const navigate = useNavigate();
 
-  const [chatHistoryGroups, setChatHistoryGroups] = useState<ChatHistoryGroups>((): ChatHistoryGroups => {
+  // setChatHistoryGroups
+  const [chatHistoryGroups] = useState<ChatHistoryGroups>((): ChatHistoryGroups => {
     // 尝试从 localStorage 获取数据
     const savedHistory = getLocalData(CHAT_LIST);
     if (savedHistory) {
       // 需要将日期字符串转回 Date 对象
       // 处理一下数据格式
       // TIME_STAGE
-      const res = Object.keys(TIME_STAGE).map((stage) => {
+      Object.keys(TIME_STAGE).map((stage) => {
         return {
           time: stage,
         };

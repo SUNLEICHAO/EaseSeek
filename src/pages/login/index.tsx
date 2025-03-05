@@ -1,17 +1,17 @@
 import React, { useMemo } from "react";
-import logoLong from "@/assets/images/logo_long.png";
 import type { CheckboxProps } from "antd";
 import { Input, Button, Checkbox, notification, Form } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import loginBg from "@/assets/images/login_bg.png";
+import logoLong from "@/assets/images/logo_long.png";
 const Context = React.createContext({ name: "Default" });
 
 export function Login() {
   const navigate = useNavigate();
 
   const [api, contextHolder] = notification.useNotification();
-  const onChange: CheckboxProps["onChange"] = (e) => {};
+  const onChange: CheckboxProps["onChange"] = () => {};
   const contextValue = useMemo(() => ({ name: "Ant Design" }), []);
   const [form] = Form.useForm();
 

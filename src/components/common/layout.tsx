@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import TheHeader from "../content/TheHeader";
+import LayoutHeader from "./LayoutHeader";
 import ChatList from "@/components/content/ChatList";
 import SvgIcon from "@/components/common/SvgIcon.tsx";
 
@@ -10,7 +10,7 @@ export const Layout: React.FC = () => {
     <>
       <div className="h-screen flex">
         <div className="w-[220px] bg-[#f9fbff] flex flex-col">
-          <TheHeader />
+          <LayoutHeader />
           <div className="flex p-2 justify-center" onClick={() => navigate("/chat")}>
             <div className=" w-36 flex flex-row items-center py-2 rounded-lg p-2 bg-[#dceafd] text-[#506df9] cursor-pointer hover:bg-[#c7dcf6]">
               <SvgIcon className="h-6 w-6 mr-2" name="new-note"></SvgIcon>

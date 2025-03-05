@@ -1,9 +1,9 @@
-import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import SendMessage from "@/pages/chat/SendMessage.tsx";
-import TheGreat from "@/pages/chat/TheGreat.tsx";
-import ChatRecord from "@/pages/chat/ChatRecord";
-import type { Message } from "@/pages/chat/types";
+import SendMessage from "@/components/content/chat/SendMessage";
+import React, { useState } from "react";
+import TheGreat from "@/components/content/chat/TheGreat";
+import ChatRecord from "@/components/content/chat/ChatRecord";
+import type { Message } from "@/types";
 
 const UserPage: React.FC = () => {
   // 组件内部：状态、副作用、事件处理函数

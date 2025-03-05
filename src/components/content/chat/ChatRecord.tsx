@@ -1,7 +1,7 @@
-import React, { useRef, useEffect } from "react";
 import { Button } from "antd";
 import { main } from "@/utils/openAIUtil.ts";
-import type { Message } from "./types";
+import type { Message } from "@/types";
+import React, { useRef, useEffect } from "react";
 interface ChatRecordProps {
   messageList: Message[];
 }
