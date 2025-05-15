@@ -16,6 +16,9 @@ importers:
       antd:
         specifier: ^5.22.4
         version: 5.24.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      immer:
+        specifier: ^10.1.1
+        version: 10.1.1
       mockjs:
         specifier: ^1.1.0
         version: 1.1.0
@@ -2013,6 +2016,10 @@ packages:
       { integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ== }
     engines: { node: ">=0.10.0" }
     hasBin: true
+
+  immer@10.1.1:
+    resolution:
+      { integrity: sha512-s2MPrmjovJcoMaHtx6K11Ra7oD05NT97w1IC5zpMkT6Atjr7H8LjaDd81iIxUYpMKSRRNMJE703M1Fhr/TctHw== }
 
   import-fresh@3.3.1:
     resolution:
@@ -5456,6 +5463,8 @@ snapshots:
   ignore@5.3.2: {}
 
   image-size@0.5.5: {}
+
+  immer@10.1.1: {}
 
   import-fresh@3.3.1:
     dependencies:
