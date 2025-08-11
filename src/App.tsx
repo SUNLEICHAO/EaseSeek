@@ -10,6 +10,8 @@ import { Layout } from "./components/common/Layout.tsx";
 import { About } from "./pages/about/index.tsx";
 import { Home } from "./pages/home/index.tsx";
 import { Login } from "./pages/login/index.tsx";
+import Playground from "./pages/playground/index.tsx";
+
 import "./App.css";
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
             <Route path="/setting" element={<Setting />} />
           </Route>
           <Route path="/login" element={<Login />} />
+          <Route path="/playground" element={<Playground />} />
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </ConfigProvider>

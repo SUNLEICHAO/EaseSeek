@@ -1,28 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 
-const Guang: React.ForwardRefRenderFunction<HTMLInputElement> = (props, ref) => {
-  return (
-    <div>
-      <input ref={ref}></input>
-    </div>
-  );
-};
-
-const WrapedGuang = React.forwardRef(Guang);
+const Child = React.forwardRef<HTMLInputElement>((props, ref) => {
+  return <input ref={ref} />;
+});
 
 function App() {
   const ref = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    console.log("ref", ref.current);
     ref.current?.focus();
   }, []);
 
-  return (
-    <div className="App">
-      <WrapedGuang ref={ref} />
-    </div>
-  );
+  return <Child ref={ref} />;
 }
 
 export default App;
