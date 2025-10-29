@@ -11,6 +11,7 @@ import { About } from "./pages/about/index.tsx";
 import { Home } from "./pages/home/index.tsx";
 import { Login } from "./pages/login/index.tsx";
 import Playground from "./pages/playground/index.tsx";
+import { Map } from "./pages/map/index.tsx";
 
 import "./App.css";
 
@@ -34,6 +35,7 @@ function App() {
             <Route path="/setting" element={<Setting />} />
           </Route>
           <Route path="/login" element={<Login />} />
+          <Route path="/map" element={<Map />} />
           <Route path="/playground" element={<Playground />} />
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
