@@ -130,11 +130,11 @@ const ChatHistoryList: React.FC = () => {
   return (
     <div className="pr-4">
       {chatHistoryGroups.map((group, groupIndex) => (
-        <div key={`group-${group.time}-${groupIndex}`}>
+        <div key={`group-${group.time}-${groupIndex}-${Math.random()}`}>
           <Divider orientation="left">{group.time}</Divider>
           {group.list.map((item) => (
             <div
-              key={`chat-${item.id}`}
+              key={`chat-${item.id}-${Math.random()}`}
               onClick={() => navigate(`/chat/${item.id}`)}
               className="text-sm/10 truncate overflow-hidden cursor-pointer hover:bg-gray-100"
             >
