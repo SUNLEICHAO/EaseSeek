@@ -1,5 +1,5 @@
 import "./index.css";
-import Demo from "@/components/playground/TimeShow.tsx";
+import Demo from "@/components/playground/EditableTable/EditableTable.tsx";
 
 const Playground: React.FC = () => {
   return (
